@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="153" id="wrn-Uv-w8q" customClass="ExamCell" customModule="FCA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="785" height="153"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wrn-Uv-w8q" id="KXS-cN-p3C">
+                <rect key="frame" x="0.0" y="0.0" width="785" height="152.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_demo" translatesAutoresizingMaskIntoConstraints="NO" id="6W4-Mx-mwc">
+                        <rect key="frame" x="0.0" y="-1" width="152.5" height="153"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7TM-7H-lFi">
+                        <rect key="frame" x="167.5" y="-0.5" width="617.5" height="152.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="HiX-AI-jxG">
+                                <rect key="frame" x="0.0" y="0.0" width="617.5" height="152.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examination name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-gI-uSg">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="152.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HiX-AI-jxG" secondAttribute="trailing" id="7Tr-va-aFT"/>
+                            <constraint firstItem="HiX-AI-jxG" firstAttribute="top" secondItem="7TM-7H-lFi" secondAttribute="top" id="Z9u-fM-R37"/>
+                            <constraint firstItem="HiX-AI-jxG" firstAttribute="leading" secondItem="7TM-7H-lFi" secondAttribute="leading" id="ufx-49-ni6"/>
+                            <constraint firstAttribute="bottom" secondItem="HiX-AI-jxG" secondAttribute="bottom" id="yJU-q1-J9Z"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-KB-kGx">
+                        <rect key="frame" x="0.0" y="11" width="785" height="131"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <action selector="btnChooseExam:" destination="wrn-Uv-w8q" eventType="touchUpInside" id="oa0-Q1-U5s"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.89298214763156536" green="0.98417661638692455" blue="0.99622938368055558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="pfL-KB-kGx" firstAttribute="leading" secondItem="KXS-cN-p3C" secondAttribute="leading" id="CKf-Zh-DKF"/>
+                    <constraint firstItem="7TM-7H-lFi" firstAttribute="height" secondItem="KXS-cN-p3C" secondAttribute="height" id="Ebd-Mn-qaZ"/>
+                    <constraint firstItem="7TM-7H-lFi" firstAttribute="centerY" secondItem="KXS-cN-p3C" secondAttribute="centerY" id="Eg5-gN-YTo"/>
+                    <constraint firstAttribute="trailing" secondItem="7TM-7H-lFi" secondAttribute="trailing" id="GWa-V3-5tI"/>
+                    <constraint firstItem="pfL-KB-kGx" firstAttribute="top" secondItem="KXS-cN-p3C" secondAttribute="topMargin" id="O9G-pu-VoF"/>
+                    <constraint firstItem="6W4-Mx-mwc" firstAttribute="width" secondItem="KXS-cN-p3C" secondAttribute="height" id="X74-7L-aFL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="pfL-KB-kGx" secondAttribute="trailing" id="ay6-nr-z3r"/>
+                    <constraint firstItem="6W4-Mx-mwc" firstAttribute="leading" secondItem="KXS-cN-p3C" secondAttribute="leading" id="bEA-EK-n4y"/>
+                    <constraint firstItem="7TM-7H-lFi" firstAttribute="leading" secondItem="6W4-Mx-mwc" secondAttribute="trailing" constant="15" id="h0o-Zt-eBC"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="pfL-KB-kGx" secondAttribute="bottom" id="idz-W4-Lyj"/>
+                    <constraint firstItem="6W4-Mx-mwc" firstAttribute="height" secondItem="KXS-cN-p3C" secondAttribute="height" id="oNX-ej-qi0"/>
+                    <constraint firstItem="6W4-Mx-mwc" firstAttribute="centerY" secondItem="KXS-cN-p3C" secondAttribute="centerY" id="sC6-rq-75m"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="content" destination="KXS-cN-p3C" id="wTL-Rv-i2e"/>
+                <outlet property="examName" destination="2pn-gI-uSg" id="mzt-t7-CyV"/>
+                <outlet property="logoImage" destination="6W4-Mx-mwc" id="oul-xj-sFB"/>
+            </connections>
+            <point key="canvasLocation" x="103.5" y="-33.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_demo" width="144" height="144"/>
+    </resources>
+</document>

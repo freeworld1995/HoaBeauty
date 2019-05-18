@@ -1,0 +1,136 @@
+{
+    "quizs":
+    [
+     {
+     "exams": "Classic Nam - Men Classic",
+     "image": "ic_classic_nam",
+     "mark": [
+              "Directions",
+              "Styling",
+              "Perfect Line",
+              "Converage",
+              "Stickies",
+              "Attachment",
+              "Clean work",
+              "Lenght",
+              "Thickness",
+              "Distance From The Eyelid",
+              "Inner And Ourter Corner",
+              "Symmetry",
+              "Over Look",
+              "Glue"
+              ]
+     },
+     {
+     "exams": "Classic Nữ - Classic",
+     "image": "ic_classic_nu",
+     "mark": [
+              "Directions",
+              "Styling",
+              "Perfect Line",
+              "Converage",
+              "Stickies",
+              "Attachment",
+              "Clean Work",
+              "Lenght",
+              "Thickness",
+              "Distance From The Eyelid",
+              "Inner And Ourter Corner",
+              "Symmetry",
+              "Over Look",
+              "Glue"
+              ]
+     },
+     {
+     "exams": "Volume 2D- 3D",
+     "image": "ic_volume",
+     "mark": [
+              "Directions",
+              "Styling",
+              "Perfect Line",
+              "Converage",
+              "Stickies",
+              "Attachment",
+              "Clean Work",
+              "Lenght",
+              "Thickness",
+              "Distance From The Eyelid",
+              "Inner And Ourter Corner",
+              "Symmetry",
+              "Over Look",
+              "Glue",
+              "Fan"
+              ]
+     },
+     {
+     "exams": "Volume 5D+",
+     "image": "ic_volume_4d",
+     "mark": [
+              "Directions",
+              "Styling",
+              "Perfect Line",
+              "Converage",
+              "Stickies",
+              "Attachment",
+              "Clean Work",
+              "Lenght",
+              "Thickness",
+              "Distance From The Eyelid",
+              "Inner And Ourter Corner",
+              "Symmetry",
+              "Over Look",
+              "Glue",
+              "Fan"
+              ]
+     },
+     {
+     "exams": "Xăm Chân Mày - Brows Permanent MakeUp",
+     "image": "ic_phunchanmay",
+     "mark": [
+              "Thickness Of Eyebrow",
+              "Eyebrow Shape",
+              "Technique Of Making",
+              "Quality Of Drawing",
+              "Smoothness Of Lines",
+              "Symmetry",
+              "Head And Tail Of Eyebrow",
+              "Color",
+              "Over Look",
+              "Degree Of Traumatis"
+              ]
+     },
+     {
+     "exams": "Điêu Khắc - Microblading",
+     "image": "ic_dieukhac",
+     "mark": [
+              "Eyebrow Shape",
+              "Technique Of Making",
+              "Quality Of Drawing",
+              "Thickness Of Lines",
+              "Thickness Of Eyebrow",
+              "Smoothness Of Lines",
+              "Hair Direction",
+              "Symmetry",
+              "Head And Tail Of Eyebrow",
+              "Color",
+              "Over Look",
+              "Degree Of Traumatis",
+              "Precision Of Lines"
+              ]
+     },
+     {
+     "exams": "Xăm Môi - Lips Permanent Makeup",
+     "image": "ic_xammoi",
+     "mark": [
+              "Over Look",
+              "Perfect Line",
+              "Color",
+              "Smoothness Of Color",
+              "Technique Of Making",
+              "Shape",
+              "Degree Of Traumatis",
+              "Quality Of Drawing"
+              ]
+     }
+     ]
+}
