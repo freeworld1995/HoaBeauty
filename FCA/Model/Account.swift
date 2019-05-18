@@ -7,15 +7,27 @@
 //
 
 import Foundation
-struct Account {
+enum AccountType {
+    
+}
+
+struct Account: Codable {
     var account: String?
     var password: String?
     var type: String?
+    var retrictions: [Int]?
     
     init(account: String, password: String, type: String) {
         self.account = account;
         self.password = password;
         self.type = type;
+    }
+    
+    init(account: String, password: String, type: String, retrictions: [Int]) {
+        self.account = account
+        self.password = password
+        self.type = type
+        self.retrictions = retrictions
     }
     
     func isMatchLogin(account: String, pass: String) -> Bool {

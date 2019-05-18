@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18D2C801228FBDAB00877F6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18D2C800228FBDAB00877F6D /* GoogleService-Info.plist */; };
+		18D2C804228FC17000877F6D /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2C803228FC17000877F6D /* DatabaseService.swift */; };
+		18D2C80A228FE60800877F6D /* Codable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D2C809228FE60800877F6D /* Codable+Extension.swift */; };
 		3AFBF6CC6C37D06FF8B24C8F /* Pods_FCA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A660A3F0E8D42B2D5B85964 /* Pods_FCA.framework */; };
 		63439E54217C51ED000A5276 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63439E52217C51EC000A5276 /* LaunchScreen.storyboard */; };
 		63439E55217C51ED000A5276 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63439E53217C51ED000A5276 /* Splash.storyboard */; };
@@ -92,6 +95,9 @@
 
 /* Begin PBXFileReference section */
 		0A660A3F0E8D42B2D5B85964 /* Pods_FCA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FCA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D2C800228FBDAB00877F6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18D2C803228FC17000877F6D /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		18D2C809228FE60800877F6D /* Codable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
 		490EA1479EED997A7189BB44 /* Pods-FCA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FCA.release.xcconfig"; path = "Pods/Target Support Files/Pods-FCA/Pods-FCA.release.xcconfig"; sourceTree = "<group>"; };
 		63439E52217C51EC000A5276 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63439E53217C51ED000A5276 /* Splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
@@ -182,6 +188,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18D2C802228FC14400877F6D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				18D2C803228FC17000877F6D /* DatabaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		2402EF365E1FCB4510D97191 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +256,7 @@
 				F5880F8E2144D89300E8CBB5 /* Products */,
 				2402EF365E1FCB4510D97191 /* Pods */,
 				F4343BE83347DD1E86A858C8 /* Frameworks */,
+				18D2C800228FBDAB00877F6D /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,6 +271,7 @@
 		F5880F8F2144D89300E8CBB5 /* FCA */ = {
 			isa = PBXGroup;
 			children = (
+				18D2C802228FC14400877F6D /* Services */,
 				F588100F2144DB8E00E8CBB5 /* Sources */,
 				F58810032144DAB200E8CBB5 /* Model */,
 				F5880FF42144DAA600E8CBB5 /* UI */,
@@ -449,6 +465,7 @@
 				F58810092144DACF00E8CBB5 /* Constants.swift */,
 				F588100A2144DACF00E8CBB5 /* UIView+SafeArea.swift */,
 				F588100B2144DACF00E8CBB5 /* Then.swift */,
+				18D2C809228FE60800877F6D /* Codable+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,6 +566,7 @@
 			files = (
 				F5880FE82144DA9700E8CBB5 /* ExamCell.xib in Resources */,
 				7449BAEC214A5579004DD109 /* Camera.storyboard in Resources */,
+				18D2C801228FBDAB00877F6D /* GoogleService-Info.plist in Resources */,
 				F5880FBE2144DA7600E8CBB5 /* Sample.xlsx in Resources */,
 				F5880FEC2144DA9700E8CBB5 /* ExaminationCell.xib in Resources */,
 				F5880FC32144DA8700E8CBB5 /* mockdata.json in Resources */,
@@ -593,22 +611,30 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FCA/Pods-FCA-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClient/GoogleAPIClient.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -660,10 +686,12 @@
 				7469F53E214CD14A0047B0BF /* EditPointCell.swift in Sources */,
 				7449BAE821490E44004DD109 /* AdminViewController.swift in Sources */,
 				F5880FEB2144DA9700E8CBB5 /* ExaminationView.swift in Sources */,
+				18D2C80A228FE60800877F6D /* Codable+Extension.swift in Sources */,
 				F58810232144DB8F00E8CBB5 /* ReaderOverlayView.swift in Sources */,
 				F5880FF02144DA9700E8CBB5 /* LoginScreen.swift in Sources */,
 				7429BCDF217DB29300F6A33F /* CommonUtils.swift in Sources */,
 				F5880FEE2144DA9700E8CBB5 /* AppDelegate.swift in Sources */,
+				18D2C804228FC17000877F6D /* DatabaseService.swift in Sources */,
 				F5880FB52144DA5400E8CBB5 /* ApiServer.swift in Sources */,
 				F58810212144DB8F00E8CBB5 /* QRCodeReaderViewController.swift in Sources */,
 				F58810272144DD1500E8CBB5 /* GAuthorizer.swift in Sources */,

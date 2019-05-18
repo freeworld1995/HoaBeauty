@@ -18,15 +18,18 @@ class LoginView: BaseViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        tapGesture.cancelsTouchesInView = false
-        tfId.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedStringKey.foregroundColor: UIColor.darkGray])
-        tfPass.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.darkGray])
-        btnLogin.layer.borderWidth = 1
-        btnLogin.layer.borderColor = UIColor.black.cgColor
-        loadAccountData()
-        initDemoData()
+        DatabaseService.instance.GetAllUser(completion: { result in
+            switch result {
+            case .success(let accounts):
+                self.accountList = accounts
+            case .failure(_): break
+                // Show get user error alert
+            }
+        })
+        addDismissTapGesture()
+        setupTextAttributes()
+//        loadAccountData()
+//        initDemoData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,12 +37,19 @@ class LoginView: BaseViewController
         resetData()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        if ManagerGoogleDrive.shared.isAuthorized() {
-        }else {
-            ManagerGoogleDrive.shared.authorize(in: self, authorizationCompletion: { (status) in})
-        }
+    // MARK: Private functions
+    
+    private func addDismissTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        tapGesture.cancelsTouchesInView = false
+    }
+    
+    private func setupTextAttributes() {
+        tfId.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedStringKey.foregroundColor: UIColor.darkGray])
+        tfPass.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.darkGray])
+        btnLogin.layer.borderWidth = 1
+        btnLogin.layer.borderColor = UIColor.black.cgColor
     }
     
     func testUpdateImage () {

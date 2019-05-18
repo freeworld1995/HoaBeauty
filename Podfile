@@ -11,4 +11,7 @@ pod 'GTMAppAuth'
 pod 'GoogleAPIClient/Drive', '~> 1.0.2'
 pod 'Firebase/Analytics'
 pod 'Firebase/Database'
+pod 'Firebase/Auth'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
 end
